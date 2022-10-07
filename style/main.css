@@ -21,7 +21,8 @@ height: 100%;
 }
 .magic-list__item{
     text-decoration: none;
-    color: --text_color: #141414;;
+    color: --text_color: #141414;
+    margin: 0;
 }
 .magic-list__item::first-child{
 
@@ -37,11 +38,11 @@ height: 100%;
 }
 .magic-list__item:hover .magic-list__header,.magic-list__item:hover::before{
     padding-left: 30px;
+    cursor: none;
 }
 .cursor{
-    transition: transform var(--transition-cursor) height 1s ease;
-    width: 10vw;
-    height: 10vh;
+    transition: transform var(--transition-cursor), height 1s ease;
+    height: 0vh;
     position: fixed;
     z-index: -100;
     display: none;
@@ -51,7 +52,7 @@ height: 100%;
 .magic-list__item:hover .cursor{
     display: block;
     transform: translate(calc(var(--move-x) - 200px),calc(var(--move-y) - 100px));
-    cursor: none;
+    transition: 1s;
 }
 .cursor_image{
     transition: transform var(--transition-cursor);
