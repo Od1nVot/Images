@@ -12,8 +12,8 @@
     font-family: 'arsenal-regular';
     src: url(../Fonts/arsenal-regular.woff2);
 }
-body{
-
+html, body{
+height: 100%;
 }
 .magic-list{
 
@@ -39,21 +39,21 @@ body{
     width: 10vw;
     height: 10vh;
     position: absolute;
+    z-index: 1000;
+    display: none;
 }
 .magic-list__item:hover .cursor{
+    display: block;
     transform: translate(var(--move-x),var(--move-y));
     
 }
 .cursor_image{
-    display: block;
-    position: fixed;
-    z-index: 1;
+    z-index: 1000;
     transition: transform var(--transition-cursor);
     width: 10vw;
     height: 10vh;
 }
 .magic-list__item:hover .cursor_image{
     display: block;
-    position: fixed;
-    z-index: 2;
+    z-index: 1000;
 }
