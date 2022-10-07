@@ -1,6 +1,7 @@
 *{
     font-family: 'arsenal-regular';
-    font-size: var(--text-size);
+    font-size: 40px;
+    transition: 1s;
 }
 :root{
     --text_color: #141414;
@@ -19,21 +20,23 @@ height: 100%;
 
 }
 .magic-list__item{
-
+    text-decoration: none;
+    color: --text_color: #141414;;
 }
 .magic-list__item::first-child{
 
 }
 .magic-list__header{
     transition: transform (var(--transition));
-    height: 20vh;
-    
+    height: 30vh;
+    padding-left: 80px;
+    transition: 1s;
 }
 .magic-list__item::before{
     transition: transform (var(--transition));
 }
 .magic-list__item:hover .magic-list__header,.magic-list__item:hover::before{
-
+    padding-left: 30px;
 }
 .cursor{
     transition: transform var(--transition-cursor) height 1s ease;
@@ -47,7 +50,7 @@ height: 100%;
 }
 .magic-list__item:hover .cursor{
     display: block;
-    transform: translate(calc(var(--move-x) - 100px),calc(var(--move-y) - 50px));
+    transform: translate(calc(var(--move-x) - 200px),calc(var(--move-y) - 100px));
     cursor: none;
 }
 .cursor_image{
