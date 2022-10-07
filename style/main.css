@@ -34,7 +34,9 @@ height: 100%;
     transition: 1s;
 }
 .magic-list__item::before{
+    height: 0px;
     transition: transform (var(--transition));
+    transform-origin: height;
 }
 .magic-list__item:hover .magic-list__header,.magic-list__item:hover::before{
     padding-left: 30px;
@@ -68,25 +70,20 @@ height: 100%;
 #image5{
     background-image: url('./../image/5.jpg');
 }
-.cursor_image,#image1,#image2,#image3,#image4,#image5{
+#image1,#image2,#image3,#image4,#image5{
     transition: transform var(--transition-cursor);
+    transform-origin:height;
     width: 400px;
-    background-size:cover;
-    animation: shrink 1s infinite alternate;
-}
-@keyframes shrink {
-    from {
-      top:0;
-    }
-    to {
-      bottom: 200px;
-    }
-  }
-.magic-list__item:hover .cursor_image,#image1,#image2,#image3,#image4,#image5{
-    height: 200px;
-    
-}
-.magic-list__item:not(:hover) .cursor_image,#image1,#image2,#image3,#image4,#image5{
     height: 0px;
-    transition: 1s;
+    background-size:cover;
+    animation: orig 1s alternate;
+    animation-fill-mode: both;
+}
+@keyframes orig {
+    0%{
+        height: 0px;
+    }
+    100%{
+        height: 200px;
+    }
 }
