@@ -25,11 +25,12 @@ height: 100%;
 
 }
 .magic-list__header{
-    transition: transform var(--transition);
+    transition: transform (var(--transition));
     height: 20vh;
+    
 }
 .magic-list__item::before{
-    transition: transform var(--transition);
+    transition: transform (var(--transition));
 }
 .magic-list__item:hover .magic-list__header,.magic-list__item:hover::before{
 
@@ -38,22 +39,21 @@ height: 100%;
     transition: transform var(--transition-cursor) height 1s ease;
     width: 10vw;
     height: 10vh;
-    position: absolute;
-    z-index: 1000;
+    position: fixed;
+    z-index: -100;
     display: none;
+    left: 0;
+    top: 0;
 }
 .magic-list__item:hover .cursor{
     display: block;
-    transform: translate(var(--move-x),var(--move-y));
-    
+    transform: translate(calc(var(--move-x) - 100px),calc(var(--move-y) - 50px));
+    cursor: none;
 }
 .cursor_image{
-    z-index: 1000;
     transition: transform var(--transition-cursor);
     width: 10vw;
     height: 10vh;
 }
 .magic-list__item:hover .cursor_image{
-    display: block;
-    z-index: 1000;
 }
