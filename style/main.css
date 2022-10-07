@@ -29,21 +29,31 @@ body{
     height: 20vh;
 }
 .magic-list__item::before{
-    «transition: transform var(--transition);
+    transition: transform var(--transition);
 }
 .magic-list__item:hover .magic-list__header,.magic-list__item:hover::before{
 
 }
 .cursor{
     transition: transform var(--transition-cursor) height 1s ease;
+    width: 10vw;
+    height: 10vh;
+    position: absolute;
 }
 .magic-list__item:hover .cursor{
-
+    transform: translate(var(--move-x),var(--move-y));
+    
 }
 .cursor_image{
-    background-image: url(../image/1.jpg);
+    display: block;
+    position: fixed;
+    z-index: 1;
     transition: transform var(--transition-cursor);
+    width: 10vw;
+    height: 10vh;
 }
 .magic-list__item:hover .cursor_image{
-
+    display: block;
+    position: fixed;
+    z-index: 2;
 }
