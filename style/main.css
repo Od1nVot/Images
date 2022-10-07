@@ -1,10 +1,12 @@
 *{
     font-family: 'arsenal-regular';
+    font-size: var(--text-size);
 }
 :root{
     --text_color: #141414;
     --text-size: calc(1vw + 1vh);
-    --transition: 
+    --transition: 1.25s cubic-bezier(.2, .5, 0, 1);
+    --transition-cursor: 2s cubic-bezier(.05, .5, 0, 1);
 }
 @font-face {
     font-family: 'arsenal-regular';
@@ -23,22 +25,24 @@ body{
 
 }
 .magic-list__header{
-
+    transition: transform var(--transition);
+    height: 20vh;
 }
 .magic-list__item::before{
-
+    «transition: transform var(--transition);
 }
 .magic-list__item:hover .magic-list__header,.magic-list__item:hover::before{
 
 }
 .cursor{
-    
+    transition: transform var(--transition-cursor) height 1s ease;
 }
 .magic-list__item:hover .cursor{
 
 }
 .cursor_image{
-
+    background-image: url(../image/1.jpg);
+    transition: transform var(--transition-cursor);
 }
 .magic-list__item:hover .cursor_image{
 
