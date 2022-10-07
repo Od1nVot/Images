@@ -2,6 +2,8 @@
     font-family: 'arsenal-regular';
 }
 :root{
+    --text_color: #141414;
+    --text-size: calc(1vw + 1vh);
     --transition: 
 }
 @font-face {
