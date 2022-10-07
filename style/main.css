@@ -1,0 +1,43 @@
+*{
+    font-family: 'arsenal-regular';
+}
+:root{
+    --transition: 
+}
+@font-face {
+    font-family: 'arsenal-regular';
+    src: url(../Fonts/arsenal-regular.woff2);
+}
+body{
+
+}
+.magic-list{
+
+}
+.magic-list__item{
+
+}
+.magic-list__item::first-child{
+
+}
+.magic-list__header{
+
+}
+.magic-list__item::before{
+
+}
+.magic-list__item:hover .magic-list__header,.magic-list__item:hover::before{
+
+}
+.cursor{
+    
+}
+.magic-list__item:hover .cursor{
+
+}
+.cursor_image{
+
+}
+.magic-list__item:hover .cursor_image{
+
+}
