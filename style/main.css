@@ -21,7 +21,7 @@ height: 100%;
 }
 .magic-list__item{
     text-decoration: none;
-    color: --text_color: #141414;
+    color: var(--text_color);
     margin: 0;
 }
 .magic-list__item::first-child{
@@ -52,7 +52,6 @@ height: 100%;
 .magic-list__item:hover .cursor{
     display: block;
     transform: translate(calc(var(--move-x) - 200px),calc(var(--move-y) - 100px));
-    transition: 1s;
 }
 .cursor_image{
     transition: transform var(--transition-cursor);
@@ -60,4 +59,5 @@ height: 100%;
     height: 10vh;
 }
 .magic-list__item:hover .cursor_image{
+
 }
